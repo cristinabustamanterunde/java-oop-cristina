@@ -1,6 +1,6 @@
 package com.example;
 
-public class Product {
+public class Product{
 
     //* atributos encapsulados (private)
 
@@ -9,7 +9,6 @@ public class Product {
     private String tipo;
     private String material;
     private Float size;
-    private Integer unitsAvailable;
     private Manufacturer brand;
 
     //* constructores:
@@ -17,17 +16,17 @@ public class Product {
     //		* con todos los parámetros
 
     public Product() { }
-    public Product(String nombre, Double price, String tipo, String material, Float size, Integer unitsAvailable, Manufacturer brand) {
+    public Product(String nombre, Double price, String tipo, String material, Float size, Manufacturer brand) {
 
-        this.nombre = nombre;
-        this.price = price;
-        this.tipo = tipo;
-        this.material = material;
-        this.size = size;
-        this.unitsAvailable = unitsAvailable;
-        this.brand = brand;
+        this.nombre = Nombre;
+        this.price = Price;
+        this.tipo = Tipo;
+        this.material = Material;
+        this.size = Size;
+        this.brand = Brand;
     }
-  //* métodos getter setter (no me acuerdo de para qué servía)
+}
+    //* métodos getter setter (no me acuerdo de para qué servía)
 
 
     public String getNombre() {
@@ -70,14 +69,6 @@ public class Product {
         this.size = size;
     }
 
-    public Integer getUnitsAvailable() {
-        return unitsAvailable;
-    }
-
-    public void setUnitsAvailable(Integer unitsAvailable) {
-        this.unitsAvailable = unitsAvailable;
-    }
-
     public Manufacturer getBrand() {
         return brand;
     }
@@ -88,5 +79,15 @@ public class Product {
     //*  toString
 
 
-
+    @Override
+    public String toString() {
+        return "Product{" +
+                "nombre='" + nombre + '\'' +
+                ", price=" + price +
+                ", tipo='" + tipo + '\'' +
+                ", material='" + material + '\'' +
+                ", size=" + size +
+                ", brand=" + brand +
+                '}';
+    }
 }
